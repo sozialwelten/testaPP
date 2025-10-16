@@ -1,2 +1,6 @@
-# testaPP
-Eine Bibliothek offener Bücherschränke im Fediverse
+#testaPP- Eine Methode im Fediverse zur Verwaltung offener und verteilter Büchercaches im öffentlichen Raum. 
+
+testaPP stellt eine Methode zur Verfügung, mit der man offene und verteilte Lagerorte von Büchern verwalten kann. Offene und verteilte Bücherlagerorte (Büchercaches) kennen keinen Unterschied zwischen Bibliothekar und Nutzer. Jeder Nutzer ist als Bibliothekar an der Verwaltung der Bibliothek beteiligt. Das führt zu Verwirrung und Ungenauigkeiten. Mit testaPP wird es jedem Nutzer möglich, den Zugriff auf verworrene Lagerbestände und ungenaue Kenntnisse ihres aktuellen Bestands zu ordnen. Das Konzept heißt "fuzzy accesibility".
+testaPP liefert die Lösung für ein Problem, das man bekommt, wenn man sich aus Gründen der Faszination für Bücher und Literatur auf die Nutzung offener Bücherschränke einlassen möchte. Der Grund für ihre Beliebtheit ist die Tatsache des inflationären Überflusses von Büchern.
+Dieser Überfluss stellt ein gesellschaftliches Problem dar, das nicht dadurch gelöst werden kann, dass man vesucht ihn zu vermindern. Vielmehr kommt es darauf an, den Überfluss zu liquidieren um ihn dadurch nutzbar zu machen. Überfluss stellt nach dem Konzept der "fuzzy accessibility" kein Problem dar, sondern eine Lösung.
+testaPP ist damit eine Methode, die ein Sonderfall von Geocaching ist. Der Sonderfall besteht darin, dass ausschließlich Bücher die Gegenstände des Suchens und Findens sind.
