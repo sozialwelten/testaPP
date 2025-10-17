@@ -16,7 +16,8 @@ testaPP
 
 *testaPP* liefert die Lösung für ein Problem, das man bekommt, wenn man sich aus Gründen der Faszination für Bücher und Literatur auf die Nutzung offener Bücherschränke einlassen möchte. Der Grund für ihre Beliebtheit ist die Tatsache des inflationär vorhandenen Überflusses von Büchern.
 
-Dieser Überfluss stellt ein gesellschaftliches Problem dar, das nicht dadurch gelöst werden kann, dass man versucht, ihn zu vermindern. Vielmehr kommt es darauf an, den Überfluss zu liquidieren, um ihn dadurch nutzbar zu machen. Der Überfluss der Gesellschaft stellt, nach dem Konzept der *fuzzy accessibility*, kein Problem dar, sondern eine Lösung, für die es noch kein geeignetes *know how* gibt.
+Dieser Überfluss stellt ein beknntes gesellschaftliches Problem dar, das nicht durch Vermeidung gelöst wird. Vielmehr kommt es darauf an, den Überfluss zu liquidieren, um ihn dadurch nutzbar zu machen. Der Überfluss der Gesellschaft stellt nach dem Konzept der *fuzzy accessibility* deshalb kein Problem dar, sondern eine Lösung, für die es noch kein geeignetes *know how* gibt. Die Innovation, die mit testaPP erprobt wird, besteht darin, etwas, das konventioneller Weise als Problem gesehen wird, in eine Lösung umzuändern.
+Die theoretischen Voraussetzungen dafür werden an anderer Stelle gesondert behandelt.
 
 *testaPP* wird als eine Methode konzipiert, die ein Sonderfall von Geocaching ist. Der Sonderfall besteht darin, dass ausschließlich *Bücher* die Gegenstände des Suchens und Findens sind.
 
@@ -26,7 +27,7 @@ Mit *testaPP* wird eine *open source software* verfügbar gemacht, die durch wei
 
 # Lizenz
 
-testaPP (C) 2025 Klaus Kusanowsky, Open Source
+testaPP (C) 2024 Klaus Kusanowsky, Open Source
 
 > Bedingungsäquivalent mit [GPLv3](LICENSE)
 
