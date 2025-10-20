@@ -56,4 +56,3 @@ testaPP (C) 2024 Klaus Kusanowsky, Open Source
 Ansonsten gelten alle jeweiligen nationalen zivilrechtlichen und strafrechtlichen Bestimmungen des Bürgerlichen Gesetzbuches und des Strafgesetzbuches, besonders Gesetze des Persönlichkeitsrechts und des Verbots von Volksverhetzung und Kinderpornografie.
 
 *Stand: Januar 2025, aktualisiert im Oktober 2025*	
-test
