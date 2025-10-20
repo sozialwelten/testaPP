@@ -1,0 +1,13 @@
+# python
+__pycache__/
+*.py[cod]
+*Spy.class
+
+# django
+/staticfiles/
+db.sqlite3
+*.log
+*.env
+*.pyo
+*.pyc
+*.pot
