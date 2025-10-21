@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,9 +103,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# Make language and timezone changable by environment variables.
+LANGUAGE_CODE = os.getenv("$TESTAPP_INSTANCE_LANGUAGE", "de")
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = os.getenv("$TESTAPP_INSTANCE_TIMEZONE", "Europe/Berlin")
 
 USE_I18N = True
 
