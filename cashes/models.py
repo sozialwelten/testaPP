@@ -1,6 +1,6 @@
 from django.db import models
 
-from testapp.utils import COUNTRY_CODES, get_country_name
+from .utils import COUNTRY_CODES, get_country_name
 
 # Create your models here.
 class Location(models.Model):

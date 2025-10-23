@@ -104,13 +104,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 # Make language and timezone changable by environment variables.
-LANGUAGE_CODE = os.getenv("$TESTAPP_INSTANCE_LANGUAGE", "de")
+LANGUAGE_CODE = os.getenv("TESTAPP_LANGUAGE", "de")
 
-TIME_ZONE = os.getenv("$TESTAPP_INSTANCE_TIMEZONE", "Europe/Berlin")
+TIME_ZONE = os.environ.get("TESTAPP_TIMEZONE", "Europe/Berlin")
+
+DOMAIN = os.environ.get("TESTAPP_DOMAIN", "example.dev")
 
 USE_I18N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)

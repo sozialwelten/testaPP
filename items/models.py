@@ -18,14 +18,7 @@ class Person(models.Model):
         return self.name
 
     def __repr__(self):
-        result = f"[PERSON]{ self.name }"
-        if self.birth and self.death:
-            result += f" ({ self.birth }–{ self.death })"
-        elif self.birth:
-            result += f" (*{ self.birth })"
-        elif self.death:
-            result += f" (†{ self.death })"
-        return result
+        return f"[items/person]{ self.name }({ self.birth or "?" }-{ self.death or "?" })"
 
 class BookItem(models.Model):
     title = models.CharField(max_length = 32)
