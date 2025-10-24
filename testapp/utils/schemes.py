@@ -1,5 +1,11 @@
-import re
+from enum import Enum
 from string import ascii_uppercase
+
+class AccessLevel(Enum):
+    HIDDEN = 0
+    PRIVATE = 1
+    LIMITED = 2
+    PUBLIC = 3
 
 ORD_MOD = 65 # so that "A = 1" when using "ord()" 
 ABC_LEN = 26
