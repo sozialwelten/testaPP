@@ -1,15 +1,7 @@
-from enum import Enum
 from string import ascii_uppercase
 
-class AccessLevel(Enum):
-    HIDDEN = 0
-    PRIVATE = 1
-    LIMITED = 2
-    PUBLIC = 3
-
-ORD_MOD = 65 # so that "A = 1" when using "ord()" 
-ABC_LEN = 26
-
+_ord_mod = 65 # so that "A = 1" when using "ord()" 
+_abc_len = 26
 class Token(str):
     """For easier handling of user tokens.
 
@@ -48,7 +40,7 @@ class Token(str):
     def __int__(self) -> int:
         n = 0
         for c in self:
-            n = n * ABC_LEN + (ord(c.upper()) - (ORD_MOD - 1))
+            n = n * _abc_len + (ord(c.upper()) - (_ord_mod - 1))
         return n
 
     def __iter__(self):

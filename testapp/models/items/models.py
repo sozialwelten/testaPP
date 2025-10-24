@@ -1,38 +1,21 @@
 from django.db import models
-from django.contrib.postgres.fields import JSONField
-import re
+from django.contrib.postgres.fields import ArrayField
 
 from accounts.models import UserToken
-from testapp.utils.schemes import Eigenname
-
-class Person(models.Model):
-    name = models.CharField(max_length = 255, null = False, blank = False)
-    birth = models.IntegerField(max_length = 4, null = True, blank = True)
-    death = models.IntegerField(max_length = 4, null = True, blank = True)
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(
-                fields = ["library", "series", "token", ],
-                name = "unique_reference"
-            ),
-        ]
-
-    def __str__(self):
-        return self.name
-
-    def __repr__(self):
-        return f"[items/person]{ self.name }({ self.birth or "?" }-{ self.death or "?" })"
 
 class Book(models.Model):
-    title = models.CharField(max_length = 32, blank = False, null = False)
-    subtitle = models.CharField(max_length = 32, default = None)
-    author = models.ManyToManyField(Person, related_name = "books")
-    editor = models.ManyToManyField(Person, related_name = "books")
-    translator = models.ManyToManyField(Person, related_name = "books")
-    editors = models.JSONField()
-
+    title = models.CharField(max_length = 30, blank = False, null = False)
     year = models.IntegerField(max_length = 4, null = True, blank = True)
+    author = ArrayField(models.CharField(max_length = 30))
+    editor = ArrayField(models.CharField(max_length = 30))
+
+    subtitle = models.CharField(max_length = 30, default = None)
+
+    translator = ArrayField(models.CharField(max_length = 30))
+    illustrator = ArrayField
+
+    rest = models.JSONField("other")
+
     location = models.CharField(max_length = 30, null = True, blank = True)
     publisher = models.CharField(max_length = 32, default = None)
 
