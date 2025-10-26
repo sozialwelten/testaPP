@@ -55,4 +55,17 @@ testaPP (C) 2024 Klaus Kusanowsky, Open Source
 
 Ansonsten gelten alle jeweiligen nationalen zivilrechtlichen und strafrechtlichen Bestimmungen des Bürgerlichen Gesetzbuches und des Strafgesetzbuches, besonders Gesetze des Persönlichkeitsrechts und des Verbots von Volksverhetzung und Kinderpornografie.
 
-*Stand: Januar 2025, aktualisiert im Oktober 2025*	
+*Stand: Januar 2025, aktualisiert im Oktober 2025*
+
+
+Öffentliche Bücherschränke sind überall zu finden – und gleichzeitig schwer nutzbar. Obwohl sie eine enorme Ressource für gemeinschaftliches Lesen darstellen, erschweren ihre Unbeständigkeit, fehlende Katalogisierung und unterschiedliche Pflegezustände die Nutzung erheblich.
+
+In unserem Vortrag stellen wir TestaPP vor, ein Projekt, das diese „analoge Unendlichkeit“ von Bücherschränken digital beobachtbar macht. Statt zu versuchen, den gesamten Bestand zu katalogisieren, liegt der Fokus auf der Beobachtung sozialer Dynamiken: Welche Schränke werden regelmäßig besucht, gepflegt oder mit besonders interessanten Büchern bestückt? Welche Nutzer liefern zuverlässige Informationen?
+
+Wir zeigen, wie Fuzzy Accessibility dabei hilft, diese Informationen trotz unvorhersehbarer Veränderungen und Verschwinden einzelner Schränke nutzbar zu machen. Anhand der sogenannten Bücherschrank-Route, einer vom Nutzer erstellten Sequenz von Schränken, demonstrieren wir, wie solche Routen andere Nutzer bei der Auswahl lohnender Bücherschränke unterstützen können, ohne dass eine vollständige Katalogisierung nötig ist.
+
+Der Vortrag beleuchtet zudem technische und organisatorische Herausforderungen: Wie lassen sich Schränke eindeutig identifizieren, wie geht man mit Änderungen um und wie entsteht ein soziales Netzwerk um physische Objekte? Schließlich teilen wir auch unsere Erfahrungen als interdisziplinäre Gruppe von Enthusiast*innen, die sich zu einem Entwicklungsprojekt zusammengefunden hat, um diese Idee in die Praxis zu bringen.
+
+Der Vortrag richtet sich an alle, die Interesse an offenen sozialen Netzwerken, dezentralen Protokollen wie ActivityPub und der Schnittstelle zwischen analogem und digitalem Raum haben – und zeigt, dass selbst scheinbar triviale Alltagsobjekte wie Bücherschränke eine überraschend komplexe digitale Dimension eröffnen können.
+
+Ich bin 35 Jahre alt, habe anfänglich Germanistik und Philosophie studiert, bevor ich recht spät Leben über die Data Science mein Gefallen am Programmieren entdeckte. Die "geisteswissenschaftliche" und "technische" näher zusammenzurücken war aber immer irgendwie das Hintergrundrauschen. Eine kleine Sammlung an Projekten, Vorträgen und Interessen ist auf https://immanuelstemmert.de zu finden.

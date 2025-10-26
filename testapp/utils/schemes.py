@@ -1,5 +1,6 @@
 from string import ascii_uppercase
 
+
 _ord_mod = 65 # so that "A = 1" when using "ord()" 
 _abc_len = 26
 class Token(str):
@@ -64,3 +65,27 @@ class Token(str):
     def __sub__(self, other) -> "Token":
         n = int(self) - int(Token(other))
         return Token(n)
+
+
+class SignatureKey(str):
+   # library = ""
+   # token = models.ForeignKey(UserToken, on_delete = models.CASCADE, related_name = "entries")
+   # series = models.IntegerField(max_length = 4, default = 0)
+   # index = models.CharField(max_length = 3)
+   # suffix = models.CharField(max_length = 30)
+   # book = models.ForeignKey(Book, on_delete = models.CASCADE, related_name = "signatures")
+
+    __slots__ = (
+        "library", "serial", "access_token", "key", "suffix"), 
+    )
+
+    def __new__(cls, item, **kwargs):
+        return super().__new__(cls, item)
+
+
+    def __str__(self) -> str:
+        result = f"[{ self.library.lower() }]{ self.series:num04 }{ self.token }{ self.index }"
+
+        if self.suffix:
+            result += f"-{ self.suffix }"
+        return result

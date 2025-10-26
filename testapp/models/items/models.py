@@ -26,25 +26,22 @@ class Book(models.Model):
             return f"{ self.title } ({ self.year })"
         return self.title
 
-
-
-
-class Signature(models.Model):
-    library = models.CharField(max_length = 255, default = "~")
-    token = models.ForeignKey(UserToken, on_delete = models.CASCADE, related_name = "entries")
-    series = models.IntegerField(max_length = 4, default = 0)
-    index = models.CharField(max_length = 3)
-    suffix = models.CharField(max_length = 30)
-    book = models.ForeignKey(Book, on_delete = models.CASCADE, related_name = "signatures")
-
-    class Meta:
-        constraints = [
-            models.UniqueConstraint(fields = ["library", "series", "token", "group", "item" ], name = "unique_key"),
-        ]
-
-    def __str__(self) -> str:
-        result = f"[{ self.library.lower() }]{ self.series:num04 }{ self.token }{ self.index }"
-
-        if self.suffix:
-            result += f"-{ self.suffix }"
-        return result
+#class Signature(models.Model):
+#    library = models.CharField(max_length = 255, default = "~")
+#    token = models.ForeignKey(UserToken, on_delete = models.CASCADE, related_name = "entries")
+#    series = models.IntegerField(max_length = 4, default = 0)
+#    index = models.CharField(max_length = 3)
+#    suffix = models.CharField(max_length = 30)
+#    book = models.ForeignKey(Book, on_delete = models.CASCADE, related_name = "signatures")
+#
+#    class Meta:
+#        constraints = [
+#            models.UniqueConstraint(fields = ["library", "series", "token", "group", "item" ], name = "unique_key"),
+#        ]
+#
+#    def __str__(self) -> str:
+#        result = f"[{ self.library.lower() }]{ self.series:num04 }{ self.token }{ self.index }"
+#
+#        if self.suffix:
+#            result += f"-{ self.suffix }"
+#        return result
