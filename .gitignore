@@ -11,3 +11,10 @@ db.sqlite3
 *.pyo
 *.pyc
 *.pot
+
+# experiments
+.scratch/*
+
+# developer directories not pushed
+local/*
+.local/*
