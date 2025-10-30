@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -104,17 +103,29 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 # Make language and timezone changable by environment variables.
-LANGUAGE_CODE = os.getenv("TESTAPP_LANGUAGE", "de")
+LANGUAGE_CODE = os.environ.get("LANGUAGE", "de")
 
-TIME_ZONE = os.environ.get("TESTAPP_TIMEZONE", "Europe/Berlin")
-
-DOMAIN = os.environ.get("TESTAPP_DOMAIN", "example.dev")
+TIME_ZONE = os.environ.get("TIMEZONE", "Europe/London")
 
 USE_I18N = True
 
 USE_TZ = True
 
 
+PORT = int(os.environ.get("PORT", 80))
+
+DOMAIN = os.environ.get("DOMAIN")
+
+if DOMAIN == "localhost":
+    PROTOCOL = "http"
+    NETLOC = f"{DOMAIN}:{PORT}"
+else:
+    PROTOCOL = "https"
+    NETLOC = DOMAIN
+
+BASE_URL = f"{PROTOCOL}://{NETLOC}"
+    
+INSTANCE_NAME = os.environ.get("INSTANCE_NAME", str(DOMAIN).replace(".", "-").title())
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
