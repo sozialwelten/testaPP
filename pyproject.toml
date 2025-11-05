@@ -1,0 +1,11 @@
+[build-system]
+requires = []         # MAYBE NEEDED
+build-backend = ""    # depends on how we build the tool at the end.
+
+[project]
+name = "TestaPP"
+version = "0.1.0"
+dependencies = []
+gui = []
+cli = []
+requires-python = ">=3.13"

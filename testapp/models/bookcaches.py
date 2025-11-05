@@ -1,24 +1,31 @@
 from django.db import models
+from enum import Enum
 
-from testapp.models.base import ActivityPubMixin
 
-GEODATA_MAX_DECIMALS = 4        # So area for identifying object is not to narrow
+### CONSTANTS ###
+_geo_max_decimals = 4
 
-def hello(world) -> str:
-    return "hello"
+class AccessLevels(str, Enum):
+    HIDDEN = "unsichtbar"
+    PRIVATE = "privat"
+    PUBLIC = "öffentlich"
 
-what = [1, 2, 3]
+class BookCacheType(str, Enum):
+    BOOKCASE = "Bücherschrank"
+    LIBRARY = "Bibliothek"
+    COLLECTION = "Sammlung"
+    ARCHIVE = "Archiv"
+    DIGITAL = "Digital"
 
-x = 2 + 3 * 4 -2
 
 class GeoLocations(models.Model):
     latitude = models.DecimalField(
-        decimal_places = GEODATA_MAX_DECIMALS,
+        decimal_places = _geo_max_decimals,
         blank = False,
         null = False
     )
     longitude = models.DecimalField(
-        decimal_places = GEODATA_MAX_DECIMALS,
+        decimal_places = _geo_max_decimals,
         blank = False,
         null = False
     )
@@ -27,26 +34,19 @@ class GeoLocations(models.Model):
 
 
 
-
-CACHE_ACCESS_LEVELS: list[tuple] = [
-    ("HIDDEN", "HIDDEN"),
-    ("PRIVATE", "PRIVATE"),
-    ("PUBLIC", "PUBLIC")
-]
-class BookCaches(models.Model, ActivityPubMixin):
+class BookCaches(models.Model):
+    """Models for any type of "book cache", mainly "PublicBookcases".
+    """
     id = models.IntegerField(primary_key = True, unique = True, auto_created = True)
-    access_level = models.CharField(choices = CACHE_ACCESS_LEVELS, default = "PRIVATE")
+    access_level = models.CharField(choices = [(k, v) for k,v in AccessLevels], default = "PRIVATE")
+
     location = models.ForeignKey(
         GeoLocations,
         on_delete = models.CASCADE,
-        related_name = "bookcache",
+        related_name = "bookcaches",
         unique = True,
         db_index = True,
     )
 
     def __str__(self):
         return str(self.id)
-
-    @property
-    def name(self) -> str:
-        return f"bc{self.id}"
