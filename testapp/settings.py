@@ -103,18 +103,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 # Make language and timezone changable by environment variables.
-LANGUAGE_CODE = os.environ.get("LANGUAGE", "de")
+LANGUAGE_CODE = os.environ.get("FTL_LANGUAGE_CODE", os.environ.get("LANGUAGE", "de"))
 
-TIME_ZONE = os.environ.get("TIMEZONE", "Europe/London")
+TIME_ZONE = os.environ.get("FTL_TIMEZONE", os.environ.get("TIMEZONE", "Europe/Berlin"))
 
 USE_I18N = True
 
 USE_TZ = True
 
-
 PORT = int(os.environ.get("PORT", 80))
 
-DOMAIN = os.environ.get("DOMAIN")
+DOMAIN = os.environ.get("FTL_DOMAIN", os.environ.get("DOMAIN", "localhost"))
 
 if DOMAIN == "localhost":
     PROTOCOL = "http"
@@ -124,8 +123,6 @@ else:
     NETLOC = DOMAIN
 
 BASE_URL = f"{PROTOCOL}://{NETLOC}"
-    
-INSTANCE_NAME = os.environ.get("INSTANCE_NAME", str(DOMAIN).replace(".", "-").title())
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
