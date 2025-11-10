@@ -3,6 +3,7 @@ import re
 from typing import Pattern, Callable
 
 def expand_url(base: str, *args: str) -> str:
+    """Expands a URL without doubling '/'"""
     parts = []
     for part in [base, *args]:
         if part.endswith("/"):
