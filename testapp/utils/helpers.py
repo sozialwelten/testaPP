@@ -2,6 +2,32 @@ import os
 import re
 from typing import Pattern, Callable
 
+def limit_text(limit: int,
+               text: str,
+               limited_hint: str|Callable[[str, int], str] = "...",
+               ) -> str:
+    """Takes a text and limits its length.
+
+    limit: int
+        Maximum displayed characters.
+    text: str
+        The text object.
+    limit_hint: str | func(ORIG, LIMIT) -> str
+        A hint, only displayed at the end of the string, when text was limited. Can be provided as a literal, or as a function, taking the original string and returning a string.
+        Length will be substracted from limit.
+
+    Returns:
+        Limited string.
+    """
+    if len(text) < limit:
+        return text
+    if isinstance(limited_hint, Callable):
+        hint: str = limited_hint(text, limit)
+    else:
+        hint = limited_hint
+    return text[:limit - len(hint) - 1] + hint
+
+
 def expand_url(base: str, *args: str) -> str:
     """Expands a URL without doubling '/'"""
     parts = []
