@@ -102,6 +102,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
+DATA_DIR = Path(os.environ.get("FTL_DATA_HOME",
+                          os.path.expandvars("$HOME/.local/share/testapp")))
+if not DATA_DIR.exists():
+    DATA_DIR.mkdir(parents = True)
+
+
+
 # Make language and timezone changable by environment variables.
 LANGUAGE_CODE = os.environ.get("FTL_LANGUAGE_CODE", os.environ.get("LANGUAGE", "de"))
 
