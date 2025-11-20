@@ -11,7 +11,7 @@ Decentralized network to register, observe, and discuss public bookcases based o
 - [Contact](#contact)
 
 
-> regarding the theoretical concept and foundaition see the [manifest (DE)](docs/manifestDE.md) (or the [English version](docs/manifestEN.md), AI-generated).
+> regarding the theoretical concept and foundaition see the [manifest (DE)](docs/manifest_de.md) (or the [English version](docs/manifest_en.md), AI-generated).
 
 
 # Development
