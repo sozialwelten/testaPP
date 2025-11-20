@@ -1,3 +1,5 @@
+.scratch/
+_scratch/
 # python
 __pycache__/
 *.py[cod]
