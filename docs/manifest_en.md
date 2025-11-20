@@ -1,5 +1,4 @@
-testaPP
-=======
+# TestaPP
 
 > [German version (original)](README.md)
 
