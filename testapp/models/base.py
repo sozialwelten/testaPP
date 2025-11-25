@@ -1,34 +1,76 @@
 from datetime import datetime as dt
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 import testapp as ta
 from testapp.utils.presets import *
+from testapp.utils.schemes import *
 
 
 # --- BASE MODEL ---
-# basic repeatable functionalities
 class TaBaseModel(models.Model):
-    id = models.IntegerField(primary_key=True,
-                             auto_created=True,
-                             unique=True,
-                             null=False)
-    created_at = models.DateTimeField(auto_now_add=True,)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    id = models.IntegerField(
+        primary_key=True,
+        auto_created=True,
+        unique=True,
+        null=False
+    )
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now_add=True)
 
-    group = models.CharField(max_length=CHARFIELD_LEN_S,
-                                       null=True,
-                                       unique=False,
-                                       choices=[(n, v) for n, v in PageGroupNames])
     class Meta:
         abstract = True
 
-    def get_local_address(self) -> str:
-        owner: TaBaseModel|None = getattr(self, 'owner', None)
-        if owner:
-            prefix = owner.get_local_address()
-        else:
-            prefix = ta.settings.DOMAIN
 
-        if self.group:
-            prefix += f"/{self.group.upper()}"
-        return f"{prefix}/{self}"
+class ActivityPubBaseModel(models.Model):
+
+    class Meta:
+        abstract = True
+
+    def get_local_name(self) -> str:
+        link = [ta.settings.DOMAIN]
+
+        if hasattr(self, 'owner'):
+            link = [getattr(self, 'owner').get_local_name()]
+
+        # if library...
+        if hasattr(self, 'long') and hasattr(self, 'lat'):
+            link += ['BIB', getattr(self, 'long'), getattr(self, 'lat')]
+
+        # if book...
+        elif hasattr(self, 'title'):
+            if hasattr(self, 'owner'):
+                link += ['BOOK', getattr(self, 'stamp')]
+            elif hasattr(self, 'author'):
+                link += ['BOOK', getattr(self, 'author'), getattr(self, 'title')]
+            else:
+                link += ['BOOK', getattr(self, 'title')] 
+
+        # if account...
+        elif hasattr(self, 'username'):
+            link += [getattr(self, 'username')]
+        # if document or document like
+        elif hasattr(self, 'doctype'):
+            link += [
+                getattr(self, 'doctype','doc').upper(),
+                getattr(self, 'name',getattr(self, 'id'))
+            ]
+        else:
+            link += [getattr(self, 'name', getattr(self, 'id'))]
+        return "/".join(link)
+
+
+class ActivityPubActor(models.Model):
+    follows = ArrayField(
+        models.CharField(max_length=CHAR_LEN_X),
+        blank=True,
+        null=True
+    )
+    followed_by = ArrayField(
+        models.CharField(max_length=CHAR_LEN_X),
+        blank=True,
+        null=True,
+    )
+
+    class Meta:
+        abstract = True

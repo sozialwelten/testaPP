@@ -16,8 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 import testapp as ta
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # --- Indeces ---
+    path('lib/<str:username>', ta.views.lib.lib_index),
+    path('')
 ]
