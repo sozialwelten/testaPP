@@ -1,7 +1,7 @@
 # TestaPP
 
 <p align="center">
-  <img src="https://github.com/sozialwelten/testapp/assets/testapp_header.png" alt="testaPP Header" width="200"/>
+  <img src="https://github.com/sozialwelten/testapp/blob/main/assets/testapp_header.png" alt="testaPP Header" width="200"/>
 </p>
 
 > State: *Pre-Alpha*
