@@ -1,6 +1,10 @@
 # TestaPP
-*Pre-Alpha*
 
+<p align="center">
+  <img src="https://github.com/sozialwelten/testapp/assets/testapp_header.png" alt="testaPP Header" width="200"/>
+</p>
+
+> State: *Pre-Alpha*
 
 Decentralized network to register, observe, and discuss public bookcases based on the [ActivityPub](https://activitypub.rocks) protocoll and written in Python.
 
@@ -29,8 +33,19 @@ For more information see [Affero General Public License](docs/AGPL3.txt) or [GNU
 
 
 # Contact
-Organization and project management: Michael Karbacher([E-Mail](mailto:sozialwelten@ifwo.eu), [Mastodon](https://ifwo.eu/@sozialwelten))
-
-Software development: Immanuel Stemmert ([E-Mail](mailto:mail@immanuelstemmert.de), [Mastodon](https://ifwo.eu/@bertrandterrier), [Homepage](https://devmule.net))
-
-Idea and concept of *TestaPP*: Klaus Kusanowsky ([E-Mail](mailto:kusanowsky@gmail.com), [Mastodon](https://ifwo.eu/@TestaPP))
+- Organization and project management: Michael Karbacher(
+  - [GitHub](https://github.com/sozialwelten)
+  - [E-Mail](mailto:sozialwelten@ifwo.eu)
+  - [Mastodon](https://ifwo.eu/@sozialwelten)
+- Leading Software developer: Hannes Heine
+  - [GitHub](https://github.com/Elweyn)
+  - [E-Mail](https://hannes.heine@it4c.dev)
+- Software development (Junior): Immanuel Stemmert
+  - [Github](https://github.com/bertrandterrier/
+  - [E-Mail](mailto:mail@immanuelstemmert.de)
+  - [Mastodon](https://ifwo.eu/@bertrandterrier)
+  - [Homepage](https://devmule.net))
+- Idea and concept of *TestaPP* Klaus Kusanowsky 
+  - [Github](https://github.com/testapp)
+  - [E-Mail](mailto:kusanowsky@gmail.com)
+  - [Mastodon](https://ifwo.eu/@TestaPP))
