@@ -2,12 +2,13 @@
 
 > State: *Pre-Alpha*
 
+Decentralized network to register, observe, and discuss public bookcases based on the [ActivityPub](https://activitypub.rocks) protocoll and written in Python.
+
 <p align="center">
   <img src="https://github.com/sozialwelten/testapp/blob/main/assets/testapp_header.png" alt="testaPP Header" width="500"/>
 </p>
 
 
-Decentralized network to register, observe, and discuss public bookcases based on the [ActivityPub](https://activitypub.rocks) protocoll and written in Python.
 
 
 - [Development](#development)
