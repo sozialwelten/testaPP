@@ -4,11 +4,10 @@ from geopy import Point
 
 import testapp as ta
 
+# --- GEOLOCATION ---
+_locator = Nominatim(user_agent="testaPP")
 
-_locator = Nominatim(user_agent="TestaPP")
-
-
-def fetch_address(
+def fetch_geo_address(
     latitude: float,
     longitude: float,
     lang: str = ta.settings.LANGUAGE_CODE.lower()
@@ -18,8 +17,7 @@ def fetch_address(
     raw = _locator.reverse(point, language=lang).raw                                                    # type: ignore
     return raw.get('address', {})
 
-
-def compare_location(
+def compare_geoloc(
     x: Point|tuple[float, float],
     y: Point|tuple[float, float],
     tolerance: int = 6

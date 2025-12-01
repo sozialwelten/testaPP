@@ -9,7 +9,7 @@ from testapp.utils.schemes import *
 
 # --- BASE MODEL ---
 class TaBaseModel(models.Model):
-    id = models.IntegerField(
+    id = models.AutoField(
         primary_key=True,
         auto_created=True,
         unique=True,
