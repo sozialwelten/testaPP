@@ -35,7 +35,7 @@ For more information see [Affero General Public License](docs/AGPL3.txt) or [GNU
 
 
 # Contact
-- Organization and project management: Michael Karbacher(
+- Organization and project management: Michael Karbacher
   - [GitHub](https://github.com/sozialwelten)
   - [E-Mail](mailto:sozialwelten@ifwo.eu)
   - [Mastodon](https://ifwo.eu/@sozialwelten)
@@ -43,11 +43,11 @@ For more information see [Affero General Public License](docs/AGPL3.txt) or [GNU
   - [GitHub](https://github.com/Elweyn)
   - [E-Mail](https://hannes.heine@it4c.dev)
 - Software development (Junior): Immanuel Stemmert
-  - [Github](https://github.com/bertrandterrier/
+  - [Github](https://github.com/bertrandterrier/)
   - [E-Mail](mailto:mail@immanuelstemmert.de)
   - [Mastodon](https://ifwo.eu/@bertrandterrier)
-  - [Homepage](https://devmule.net))
+  - [Homepage](https://devmule.net)
 - Idea and concept of *TestaPP* Klaus Kusanowsky 
   - [Github](https://github.com/testapp)
   - [E-Mail](mailto:kusanowsky@gmail.com)
-  - [Mastodon](https://ifwo.eu/@TestaPP))
+  - [Mastodon](https://ifwo.eu/@TestaPP)
